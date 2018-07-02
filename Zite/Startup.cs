@@ -28,11 +28,11 @@ namespace Zite
       services.AddCors(options =>
       {
         options.AddPolicy("AllowSpecificOrigin",
-            builder => builder.WithOrigins("http://localhost:49866"));
+            builder => builder.WithOrigins("https://frontzite.herokuapp.com/"));
         options.AddPolicy("AllowAllHeaders",
                     builder =>
                     {
-                      builder.WithOrigins("http://localhost:49866")
+                      builder.WithOrigins("https://frontzite.herokuapp.com/")
                              .AllowAnyHeader();
                     });
       });
@@ -48,7 +48,7 @@ namespace Zite
         }
 
       app.UseCors((builder =>
-        builder.WithOrigins("http://localhost:49866")
+        builder.WithOrigins("https://frontzite.herokuapp.com/")
             .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod()));
