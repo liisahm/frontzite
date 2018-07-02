@@ -48,7 +48,7 @@ namespace Zite
         }
 
       app.UseCors((builder =>
-        builder.WithOrigins("http://localhost:49866")
+        builder.WithOrigins("https://frontzite.herokuapp.com/")
             .AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod()));
